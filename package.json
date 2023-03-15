@@ -1,0 +1,41 @@
+{
+  "name": "stretchshop",
+  "version": "0.6.12",
+  "description": "Fast & scalable e-commerce",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StretchShop/StretchShop.git"
+  },
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services",
+    "start": "moleculer-runner",
+    "deps": "npm-check -u",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "docker:build": "docker build -t stretchshop .",
+    "demo": "node demo/demo.js",
+    "postinstall": "node demo/demo.js base"
+  },
+  "keywords": [
+    "stretchshop",
+    "microservices",
+    "moleculer",
+    "e-commerce"
+  ],
+  "author": "Marcel Zúbrik - cw.sk",
+  "dependencies": {
+    "stretchshop": "^0.6.12"
+  },
+  "engines": {
+    "node": ">= 12.x.x"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
