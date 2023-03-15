@@ -42,7 +42,7 @@ module.exports = {
 		"DELETE /cart/:itemId": "cart.delete",
 		"DELETE /cart/:itemId/:amount": "cart.delete",
 
-		// Products
+		// Products 
 		"GET /products/:category": "products.productsListGet",
 		"POST /products/:category": "products.productsList", // needed for category with filter url
 		"POST /products/filter": "products.findWithCount",
